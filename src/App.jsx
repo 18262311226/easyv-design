@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Easyv from './layout/easyv'
 import './App.css'
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <Easyv></Easyv>
     </div>
   )
 }
