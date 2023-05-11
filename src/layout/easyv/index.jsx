@@ -1,7 +1,7 @@
 import { useEffect,createElement } from 'react'
 import { AreaChartOutlined, ClockCircleOutlined, ContainerOutlined, WindowsOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 import styles from './index.module.less'
 
 function getItem(label, key, icon, children, type) {
