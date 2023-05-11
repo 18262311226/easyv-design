@@ -48,21 +48,20 @@ function Easyv () {
                 <Header
                     style={{
                         padding: 0,
-                        background: '#001529'
+                        background: colorBgContainer
                     }}
                 />
                 <Content
                     style={{
                         height:'100%',
                         margin: '24px 16px 0',
-                        background: '#001529'
                     }}
                 >
                 <div
                     style={{
                         padding: 24,
                         height: '100%',
-                        background: '#001529'
+                        background: colorBgContainer
                     }}
                 >
                     content
