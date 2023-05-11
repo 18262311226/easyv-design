@@ -1,69 +1,73 @@
 import { useEffect,createElement } from 'react'
-import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
+import { AreaChartOutlined, ClockCircleOutlined, ContainerOutlined, WindowsOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
 import styles from './index.module.less'
+
+function getItem(label, key, icon, children, type) {
+    return {
+      key,
+      icon,
+      children,
+      label,
+      type,
+    };
+}
 
 function Easyv () {
     const {
         token: { colorBgContainer },
     } = theme.useToken();
+    const items = [
+        getItem('我的应用', '1', <AreaChartOutlined />),
+        getItem('最近编辑', '2', <ClockCircleOutlined />),
+        getItem('回收站', '3', <ContainerOutlined />)
+    ];
+
+    const onClick = ({ key }) => {
+       
+    };
     return (
         <Layout style={{height:'100%'}}>
             <Sider
                 breakpoint="lg"
                 collapsedWidth="0"
-                onBreakpoint={(broken) => {
-                    console.log(broken);
-                }}
-                onCollapse={(collapsed, type) => {
-                    console.log(collapsed, type);
-                }}
             >
-                <div className={styles.logo} />
+                <div className={styles.logo}>
+                    <WindowsOutlined />
+                    <span style={{marginLeft:'10px'}}>easyv-design</span>
+                </div>
                 <Menu
                     theme="dark"
                     mode="inline"
                     defaultSelectedKeys={['4']}
-                    items={[UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map(
-                        (icon, index) => ({
-                            key: String(index + 1),
-                            icon: createElement(icon),
-                            label: `nav ${index + 1}`,
-                        }),
-                    )}
+                    items={items}
                 />
             </Sider>
             <Layout>
                 <Header
                     style={{
                         padding: 0,
-                        background: colorBgContainer,
+                        background: '#001529'
                     }}
                 />
                 <Content
                     style={{
                         height:'100%',
                         margin: '24px 16px 0',
+                        background: '#001529'
                     }}
                 >
                 <div
                     style={{
                         padding: 24,
                         height: '100%',
-                        background: colorBgContainer,
+                        background: '#001529'
                     }}
                 >
                     content
                 </div>
                 </Content>
-                <Footer
-                    style={{
-                        textAlign: 'center',
-                    }}
-                >
-                    Ant Design ©2023 Created by Ant UED
-                </Footer>
             </Layout>
         </Layout>
     )
