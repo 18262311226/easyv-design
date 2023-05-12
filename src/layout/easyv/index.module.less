@@ -1,7 +1,33 @@
-.container{
-    width:500px;
-    height:500px;
-    background:#333;
+.header{
+    padding: 0;
+    .header_body{
+        width:100%;
+        height:100%;
+        position:relative;
+        .avatar{
+           position: absolute;
+           top:50%;
+           right:20px;
+           transform: translateY(-50%); 
+        }
+    }
+}
+.content{
+    height:100%;
+    margin: 24px 16px 0;
+    .echarts{
+        padding: 10px;
+        height: 100%;
+        overflow-y: auto;
+        .operation{
+            width:100%;
+            height:50px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 }
 .logo {
     height: 32px;
@@ -9,6 +35,6 @@
     text-align: center;
     line-height: 32px;
     font-size: 22px;
-    color: #fff;
+    color: #333;
     font-style:italic;
 }
