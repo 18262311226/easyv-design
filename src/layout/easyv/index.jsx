@@ -1,7 +1,7 @@
 import { useEffect,createElement, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AreaChartOutlined, ClockCircleOutlined, ContainerOutlined, WindowsOutlined,SettingOutlined,EditOutlined,EllipsisOutlined } from '@ant-design/icons';
-import { Layout, Menu, theme,Avatar, Card, Button, Empty, List, Modal, Form, Input } from 'antd';
+import { Layout, Menu, theme,Avatar, Card, Button,Badge, Empty, List, Modal, Form, Input } from 'antd';
 const { Header, Content, Sider } = Layout;
 const { Meta } = Card;
 import styles from './index.module.less'
@@ -98,6 +98,7 @@ function Easyv () {
                                         dataSource={data}
                                         renderItem={(item) => (
                                             <List.Item>
+                                                <Badge.Ribbon color="volcano" text="my App">
                                                 <Card
                                                     hoverable
                                                     className={styles.cardbox}
@@ -119,6 +120,7 @@ function Easyv () {
                                                         description="未发布"
                                                     />
                                                 </Card>
+                                                </Badge.Ribbon>
                                             </List.Item>
                                         )}
                                     />
