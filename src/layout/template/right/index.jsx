@@ -1,5 +1,5 @@
 import styles from './index.module.less'
-import { FormatPainterOutlined, NodeExpandOutlined } from '@ant-design/icons';
+import { FormatPainterOutlined, NodeExpandOutlined, ToolOutlined } from '@ant-design/icons';
 import { Tabs } from 'antd';
 
 function Right () {
@@ -14,11 +14,19 @@ function Right () {
         },
         {
             label: (<span>
-                <NodeExpandOutlined />
-                数据
+                <ToolOutlined />
+                属性
             </span>),
             key: 2,
             children: `tab 2`
+        },
+        {
+            label: (<span>
+                <NodeExpandOutlined />
+                数据
+            </span>),
+            key: 3,
+            children: `tab 3`
         }
     ]
 
