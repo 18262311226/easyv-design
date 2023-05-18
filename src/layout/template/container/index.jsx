@@ -8,11 +8,7 @@ function Container () {
             <div className={styles.canvas}></div>
             <FloatButton.Group
                 shape="square"
-                style={{
-                    position:'absolute',
-                    bottom:80,
-                    right: 10,
-                }}
+                className={styles.floatButton}
             >
                 <FloatButton icon={<PlusOutlined />} />
                 <Input />
