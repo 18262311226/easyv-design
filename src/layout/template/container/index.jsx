@@ -2,7 +2,7 @@ import styles from './index.module.less'
 
 function Container () {
     return (
-        <div>container</div>
+        <div className={styles.container}></div>
     )
 }
 

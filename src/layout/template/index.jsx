@@ -8,11 +8,13 @@ import Right from './right/index'
 
 function Template () {
     return (
-        <div>
+        <div className={styles.container}>
             <Header></Header>
-            <Left></Left>
-            <Container></Container>
-            <Right></Right>
+            <div className={styles.content}>
+                <Left></Left>
+                <Container></Container>
+                <Right></Right>
+            </div>
         </div>
     )
 }
