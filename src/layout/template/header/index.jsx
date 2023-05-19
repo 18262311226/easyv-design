@@ -1,5 +1,5 @@
 import styles from './index.module.less'
-import { LeftCircleOutlined,FolderOutlined,DesktopOutlined,DoubleLeftOutlined,DoubleRightOutlined,DownloadOutlined,ExpandOutlined,ReloadOutlined } from '@ant-design/icons';
+import { RiseOutlined,LeftCircleOutlined,FolderOutlined,DesktopOutlined,DoubleLeftOutlined,DoubleRightOutlined,DownloadOutlined,ExpandOutlined,HeatMapOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom'
 
 function Header () {
@@ -19,6 +19,10 @@ function Header () {
             </div>
             <div className={styles.navigates}>
                 <ul className={styles.navigatesList}>
+                    <li className={styles.listItem}>
+                        <RiseOutlined className={styles.icon}/>
+                        发布
+                    </li>
                     <li className={styles.listItem}>
                         <FolderOutlined className={styles.icon}/>
                         保存
@@ -44,7 +48,7 @@ function Header () {
                         全屏
                     </li>
                     <li className={styles.listItem}>
-                        <ReloadOutlined className={styles.icon}/>
+                        <HeatMapOutlined className={styles.icon}/>
                         清除
                     </li>
                 </ul>
