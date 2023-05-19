@@ -1,6 +1,8 @@
 import styles from './index.module.less'
 import { BarChartOutlined, ApartmentOutlined } from '@ant-design/icons';
 import { Tabs } from 'antd';
+import CmpList from './cmpList/cmpList'
+import LayerList from './layerList/layerList';
 
 function Left () {
     const tabs = [
@@ -10,7 +12,7 @@ function Left () {
                 组件
             </span>),
             key: 1,
-            children: `tab 1`
+            children: (<CmpList></CmpList>)
         },
         {
             label: (<span>
@@ -18,7 +20,7 @@ function Left () {
                 图层
             </span>),
             key: 2,
-            children: `tab 2`
+            children: (<LayerList></LayerList>)
         }
     ]
 
