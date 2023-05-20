@@ -27,6 +27,11 @@ function Left () {
     return (
         <div className={styles.container}>
             <Tabs
+                style={
+                    {
+                        height: '100%'
+                    }
+                }
                 defaultActiveKey="1"
                 items={tabs}
             />
