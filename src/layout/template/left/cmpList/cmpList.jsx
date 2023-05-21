@@ -27,22 +27,22 @@ function CmpList (props) {
             ]
         },
         {
-            title: '条形图',
+            title: '折线图',
             key: '2',
             icon: '',
             children: [
                 {
-                    title: '条形图 1',
+                    title: '折线图 1',
                     key: '1',
                     icon: (<BarChartOutlined />)
                 },
                 {
-                    title: '条形图 2',
+                    title: '折线图 2',
                     key: '2',
                     icon: (<BarChartOutlined />)
                 },
                 {
-                    title: '条形图 3',
+                    title: '折线图 3',
                     key: '3',
                     icon: (<BarChartOutlined />)
                 }
